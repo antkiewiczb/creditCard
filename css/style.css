@@ -15,7 +15,7 @@ body {
 }
 h1 {
 	position: absolute;
-	top: 280px;
+	top: 230px;
 	left: 50px;
 	font-size: 0;
 }
@@ -77,9 +77,31 @@ h1 span:nth-child(16) {
 h2 {
 	position: absolute;
 	font-size: 36px;
-	top: 20px;
+	top: -100px;
 	left: 500px;
 	color: rgb(56, 65, 92);
+	overflow: hidden;
+	animation: fallingInscription 3s forwards;
+}
+h3 {
+	position: absolute;
+	bottom: 80px;
+	left: 70px;
+	color: #fff;
+	text-shadow: 2px 2px 5px #000;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	animation: rotate-heading 5s forwards;
+}
+h4 {
+	position: absolute;
+	bottom: 80px;
+	right: 250px;
+	color: #fff;
+	text-shadow: 2px 2px 5px #000;
+	letter-spacing: 3px;
+	font-size: 1.17em;
+	animation: rotate-heading 5s forwards;
 }
 .card {
 	position: relative;
@@ -103,6 +125,13 @@ h2 {
 	bottom: -200px;
 	width: 100px;
 	animation: move 3s forwards;
+}
+.chip-card {
+	position: absolute;
+	left: -100px;
+	bottom: 180px;
+	width: 50px;
+	animation: enteringChip 3s forwards;
 }
 
 @keyframes move {
@@ -137,5 +166,22 @@ h2 {
 		transform: rotateY(0);
 		filter: blur(0);
 		opacity: 1;
+	}
+}
+
+@keyframes fallingInscription {
+	from {
+		margin-top: 0;
+	}
+	to {
+		margin-top: 150px;
+	}
+}
+@keyframes enteringChip {
+	from {
+		margin-left: 0;
+	}
+	to {
+		margin-left: 150px;
 	}
 }
